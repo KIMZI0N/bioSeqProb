@@ -69,6 +69,7 @@ seq = input("dna sequence: ")
 seq = seq.upper()
 trans = []
 for i in range(int(len(seq) / 3)):
+    # range에서도 3씩 증가 가능. range(0, len(seq)-len(seq)%3, 3)
     trans.append(codon_dic[seq[i * 3 : i * 3 + 3]])
 s_trans = "".join(trans)
 print(s_trans)

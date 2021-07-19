@@ -3,7 +3,7 @@ seq = input("dna sequence: ")
 seq = seq.upper()
 seqRev = seq[::-1]
 seqRevCom = ""
-d_base = {"A": "T", "G": "C", "C": "G", "T": "A"}
+d_base = {"A": "U", "G": "C", "C": "G", "T": "A"}
 for i in seqRev:
     seqRevCom += d_base[i]
 print(seqRevCom)
