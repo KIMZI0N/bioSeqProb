@@ -76,8 +76,8 @@ for i in range(0, len(seq), 3):
     s = seq[i : i + 3]
     l_cod.append(s)  # input sequence를 codon단위로 list에 저장
     l_ami.append(d_codon[s])  # l_cod과 매칭되는 아미노산을 list에 저장
-# print(l_cod)
-# print(l_ami)
+print("codon list:", l_cod)
+print("amino acid list: ", l_ami)
 
 d_res = {}  # result를 담는 dictionary. key: codon, value: count
 
@@ -101,3 +101,17 @@ print(d_res)
 # for key, val in d_trans.items():
 #     if val == inAmi:
 #         print(key)
+# 수연언니 코드
+# with open("Sequence_DNA.txt", "r") as handle:
+#     read = handle.readline()
+#     seq = read
+#     codon_frequency = dict()
+#     aa = input("amino acid:")
+#     for i in range(0, len(seq), 3):
+#         k = seq[i : i + 3]
+#         if k in codon_dic and codon_dic[k] == aa:
+#             if k in codon_frequency:
+#                 codon_frequency[k] += 1
+#             else:
+#                 codon_frequency[k] = 1
+#     print(codon_frequency)
